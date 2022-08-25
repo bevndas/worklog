@@ -1,0 +1,5 @@
+@use "src/themes/variables" as v;
+.dashboard-div{
+  color: var(--text-primary);
+  background: var(--background-high);
+}

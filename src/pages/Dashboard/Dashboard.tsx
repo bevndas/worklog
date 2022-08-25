@@ -1,6 +1,11 @@
 import React from 'react';
-import DashboardRouter from './DashboardRouter';
+import './Dashboard.scss';
+
 const Dashboard: React.FC<{}> = () => {
-    return <DashboardRouter/>
+    return (
+        <div className='dashboard-div'>
+            <p>This is  dashboard page</p>
+        </div>
+    )
 }
 export default Dashboard;

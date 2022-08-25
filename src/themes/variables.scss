@@ -1,0 +1,33 @@
+:root {
+  --brand-color: #F47222;
+  --success:  #2d995b;
+  --background-light: #FFFFFF;
+  --background-medium: #F5F6F8;
+  --background-high: #F5F6F8;
+
+  --text-primary: #121212;
+  --text-secondar: #181818;
+
+  --divider: #282828;
+}
+
+.theme-light {
+  --background-light: #FFFFFF;
+  --background-medium: #F5F6F8;
+  --background-high: #F5F6F8;
+
+  --text-primary: #121212;
+  --text-secondar: #181818;
+
+  --divider: #282828;
+}
+.theme-dark {
+  --background-light: #32383e;
+  --background-medium: #1D2329;
+  --background-high: #212529;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+
+  --divider: #404040;
+}
