@@ -1,6 +1,7 @@
 import React from 'react';
-import AuthenticationRouter from './AuthenticationRouter';
+
+import {Outlet} from 'react-router-dom';
 const Authentication: React.FC<{}> = () => {
-    return <AuthenticationRouter/>
+    return <Outlet/>
 }
 export default Authentication;
