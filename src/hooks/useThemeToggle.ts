@@ -1,10 +1,10 @@
-import {getData} from '../utils/storage';
+import {getData, setData} from '../utils/storage';
 import {useEffect, useState} from 'react';
 const LIGHT_THEME = 'theme-light';
 const DARK_THEME = 'theme-dark';
 const useThemeToggle = () => {
     const theme = getData('theme') || '';
-    const [currentTheme, setTheme] = useState(theme);
+    const [currentTheme, setTheme] = useState<string>(theme);
 
     useEffect(() => {
         handleThemeChange(currentTheme);
@@ -25,7 +25,7 @@ const useThemeToggle = () => {
             }
             body.classList.add(DARK_THEME)
         }
-
+        setData('theme', themeName)
     }
     return [currentTheme, setTheme]
 }

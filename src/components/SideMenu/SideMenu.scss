@@ -1,0 +1,26 @@
+.side-menu{
+  height: 100%;
+  width: 200px;
+  min-width: 200px;
+  color: var(--text-primary);
+  border-right: 1px solid var(--background-light);
+  background: var(--background-medium);
+  .app-content  {
+    color: var(--brand-color);
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      padding: 10px;
+
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+    }
+  }
+}
