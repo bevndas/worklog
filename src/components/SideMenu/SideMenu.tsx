@@ -3,6 +3,7 @@ import './SideMenu.scss';
 import {sideMenuData} from './SideMenu.data';
 import {Menu} from './SideMenu.interface';
 import {Link, NavLink} from 'react-router-dom';
+import Icon from "../Icon";
 
 
 const SideMenu: React.FC<{}> = () => {
@@ -11,18 +12,16 @@ const SideMenu: React.FC<{}> = () => {
             <div className="app-content">
                 Worklog
             </div>
-            <ul>
-                {sideMenuData.map((menu: Menu)=> {
+            <div className="menu-list">
+                {sideMenuData.map(({id, url, label, icon}: Menu)=> {
                     return (
-                        <li  key={menu.id}>
-                            <NavLink  to={menu.url}>
-                                {menu.label}
-                            </NavLink>
-                        </li>
+                        <NavLink key={id} to={url} className={({isActive}) => isActive ? 'active': ''}>
+                            <Icon name={icon} /> {label}
+                        </NavLink>
                     )
                 })}
-            </ul>
-
+                <a>Sign Out</a>
+            </div>
         </div>
     )
 }
