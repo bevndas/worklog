@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 const LIGHT_THEME = 'theme-light';
 const DARK_THEME = 'theme-dark';
 const useThemeToggle = () => {
-    const theme = getData('theme') || '';
+    const theme = getData('theme') || LIGHT_THEME;
     const [currentTheme, setTheme] = useState<string>(theme);
 
     useEffect(() => {
@@ -27,6 +27,6 @@ const useThemeToggle = () => {
         }
         setData('theme', themeName)
     }
-    return [currentTheme, setTheme]
+    return [currentTheme, setTheme] as const;
 }
 export default useThemeToggle;
