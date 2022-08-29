@@ -2,7 +2,7 @@ import React from 'react';
 import './SideMenu.scss';
 import {sideMenuData} from './SideMenu.data';
 import {Menu} from './SideMenu.interface';
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import Icon from "../Icon";
 
 
@@ -20,7 +20,8 @@ const SideMenu: React.FC<{}> = () => {
                         </NavLink>
                     )
                 })}
-                <a>Sign Out</a>
+                <a>
+                    <Icon name='logout' /> Sign Out</a>
             </div>
         </div>
     )

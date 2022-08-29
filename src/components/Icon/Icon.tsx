@@ -7,6 +7,7 @@ interface IIcon {
 const Icon = ({name} : IIcon) => {
     // @ts-ignore
     const IconComponent = IconData[name];
+    if (!IconComponent) return <></>
     return <IconComponent />;
 }
 export default Icon;

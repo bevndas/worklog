@@ -1,7 +1,8 @@
-import {MdDashboard, MdSettings, MdSnooze} from "react-icons/md";
+import {MdDashboard, MdSettings, MdSnooze, MdLogout} from "react-icons/md";
 
 export const IconData = {
     dashboard: MdDashboard,
     leaves: MdSnooze,
-    settings: MdSettings
+    settings: MdSettings,
+    logout: MdLogout
 }
