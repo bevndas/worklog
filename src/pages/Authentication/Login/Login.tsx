@@ -33,7 +33,9 @@ const Login: React.FC<{}> = () => {
                                 <Form>
                                     <FormikInput label='Username' name='username' autofill='none' type='email' />
                                     <FormikInput label='Password' name='password' type='password' />
+                                    <p className='forgot-password'>Forgot password?</p>
                                     <Button>Login</Button>
+                                    <p className='sign-up'>Don't have an account? <span>Sign Up!</span></p>
                                 </Form>
                             )
                         }

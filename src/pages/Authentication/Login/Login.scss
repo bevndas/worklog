@@ -3,6 +3,7 @@
 .login-page {
   display: flex;
   align-items: center;
+  background: var(--background-high);
   .login-brand-illustration {
     @include center-content;
     flex: 1;
@@ -21,6 +22,22 @@
         width: 300px;
         max-width: 500px;
         min-width: 300px;
+        p {
+          @include font(0.8rem, var(--font-weight-light), var(--brand-color));
+          cursor: pointer;
+        }
+        p.forgot-password {
+          text-align: right;
+          margin: 15px 0 15px 0;
+        }
+        p.sign-up {
+          text-align: center;
+          margin-top: 40px;
+          color: var(--text-primary);
+          span {
+            color: var(--brand-color);
+          }
+        }
       }
     }
   }

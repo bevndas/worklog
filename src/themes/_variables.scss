@@ -1,7 +1,7 @@
 :root {
   --brand-color: #F47222;
   --success:  #2d995b;
-  --error: #cc0000;
+  --error: #EA4C46;
 
   --spinner-color: #FFFFFF;
 
@@ -13,6 +13,12 @@
   --text-secondary: #181818;
 
   --divider: #282828;
+
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-mild: 500;
+  --font-weight-semi-bold: 700;
+  --font-weight-bold: 900;
 }
 
 .theme-light {
