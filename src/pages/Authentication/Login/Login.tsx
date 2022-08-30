@@ -7,6 +7,8 @@ import {useNavigate} from 'react-router-dom';
 import useAuth from 'hooks/useAuth';
 import {LoginImage} from 'assets/images';
 import Button from "../../../components/Button";
+import {routepaths} from 'global/routepaths';
+
 const Login: React.FC<{}> = () => {
     const navigate = useNavigate();
     const {handleLogin} = useAuth();
@@ -33,9 +35,9 @@ const Login: React.FC<{}> = () => {
                                 <Form>
                                     <FormikInput label='Username' name='username' autofill='none' type='email' />
                                     <FormikInput label='Password' name='password' type='password' />
-                                    <p className='forgot-password'>Forgot password?</p>
+                                    <p className='forgot-password' onClick={() => navigate(routepaths.auth.forgotPassword)}>Forgot password?</p>
                                     <Button>Login</Button>
-                                    <p className='sign-up'>Don't have an account? <span>Sign Up!</span></p>
+                                    <p className='sign-up'>Don't have an account? <span onClick={() => navigate(routepaths.auth.signUp)}>Sign Up!</span></p>
                                 </Form>
                             )
                         }
