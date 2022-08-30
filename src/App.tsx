@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css';
+import 'assets/scss/app.scss';
 import AppRouter from './AppRouter';
 import useThemeToggle from './hooks/useThemeToggle';
 
