@@ -2,10 +2,14 @@ import React from  'react';
 import {Form, Formik} from 'formik';
 import {initialLoginData, loginValidationSchema} from './LoginValidation';
 import FormikInput from '../../../components/Formik/FormikInput';
+import {setData} from '../../../utils/storage';
+import {useNavigate} from 'react-router-dom';
 const Login: React.FC<{}> = () => {
+    const navigate = useNavigate();
 
     const handleSubmit = async (values: typeof initialLoginData)  => {
-
+        setData('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzNDU2Nzg5LCJuYW1lIjoiSm9zZXBoIn0.OpOSSw7e485LOP5PrzScxHb7SR6sAOMRckfFwi4rp7o');
+        navigate('/');
     }
 
     return (
