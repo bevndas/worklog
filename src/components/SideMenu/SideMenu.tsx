@@ -20,8 +20,6 @@ const SideMenu: React.FC<{}> = () => {
                         </NavLink>
                     )
                 })}
-                <a>
-                    <Icon name='logout' /> Sign Out</a>
             </div>
         </div>
     )
