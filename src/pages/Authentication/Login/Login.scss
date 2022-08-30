@@ -1,0 +1,28 @@
+@import "src/themes/theme";
+
+.login-page {
+  display: flex;
+  align-items: center;
+  .login-brand-illustration {
+    @include center-content;
+    flex: 1;
+  }
+  .login-form-ctn {
+    @include center-content;
+    flex: 1;
+    flex-direction: column;
+    .brand-information {
+      @include font(2.5rem, bolder, var(--brand-color));
+      margin-bottom: 20px;
+    }
+    .login-form {
+
+      form {
+        width: 300px;
+        max-width: 500px;
+        min-width: 300px;
+      }
+    }
+  }
+
+}

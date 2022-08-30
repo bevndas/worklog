@@ -1,10 +1,11 @@
 import React from  'react';
 import {Form, Formik} from 'formik';
 import {initialLoginData, loginValidationSchema} from './LoginValidation';
-import FormikInput from '../../../components/Formik/FormikInput';
-import {setData} from '../../../utils/storage';
+import FormikInput from 'components/Formik/FormikInput';
+import './Login.scss';
 import {useNavigate} from 'react-router-dom';
-import useAuth from '../../../hooks/useAuth';
+import useAuth from 'hooks/useAuth';
+import {LoginImage} from 'assets/images';
 const Login: React.FC<{}> = () => {
     const navigate = useNavigate();
     const {handleLogin} = useAuth();
@@ -15,19 +16,32 @@ const Login: React.FC<{}> = () => {
     }
 
     return (
-        <Formik initialValues={initialLoginData}
-                validationSchema={loginValidationSchema} onSubmit={handleSubmit}>
-            {
-                ({values}) => (
-                    <Form>
-                        <FormikInput label='Username' name='username' autofill='none' type='email' />
-                        <FormikInput label='Password' name='password' type='password' />
-                        <button type='submit'>Login</button>
-                    </Form>
-                )
-            }
-
-        </Formik>
+        <div className='login-page full-page'>
+            <div className="login-brand-illustration">
+                <img src={LoginImage} alt="Login Brand Illustration"/>
+            </div>
+            <div className="login-form-ctn">
+                <div className="brand-information">
+                    Worklog!
+                </div>
+                <div className="login-form">
+                    <Formik initialValues={initialLoginData}
+                            validationSchema={loginValidationSchema} onSubmit={handleSubmit}>
+                        {
+                            ({values}) => (
+                                <Form>
+                                    <FormikInput label='Username' name='username' autofill='none' type='email' />
+                                    <FormikInput label='Password' name='password' type='password' />
+                                    <button type='submit'>Login</button>
+                                </Form>
+                            )
+                        }
+                    </Formik>
+                </div>
+            </div>
+            
+        </div>
+        
     )
 }
 export default Login;
