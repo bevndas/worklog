@@ -4,5 +4,5 @@ export const IconData = {
     dashboard: MdDashboard,
     leaves: MdSnooze,
     settings: MdSettings,
-    logout: MdLogout
+    logout: MdLogout,
 }

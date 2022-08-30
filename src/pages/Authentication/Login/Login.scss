@@ -24,5 +24,12 @@
       }
     }
   }
+}
 
+@include for-size(phone-only) {
+.login-page {
+  .login-brand-illustration {
+    display: none;
+  }
+}
 }

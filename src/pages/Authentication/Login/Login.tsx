@@ -6,6 +6,7 @@ import './Login.scss';
 import {useNavigate} from 'react-router-dom';
 import useAuth from 'hooks/useAuth';
 import {LoginImage} from 'assets/images';
+import Button from "../../../components/Button";
 const Login: React.FC<{}> = () => {
     const navigate = useNavigate();
     const {handleLogin} = useAuth();
@@ -32,7 +33,7 @@ const Login: React.FC<{}> = () => {
                                 <Form>
                                     <FormikInput label='Username' name='username' autofill='none' type='email' />
                                     <FormikInput label='Password' name='password' type='password' />
-                                    <button type='submit'>Login</button>
+                                    <Button>Login</Button>
                                 </Form>
                             )
                         }

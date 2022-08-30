@@ -1,4 +1,4 @@
-import {Field, ErrorMessage, useField} from 'formik';
+import {ErrorMessage, useField} from 'formik';
 import FormikErrorMessage from '../FormikErrorMessage';
 
 const FormikInput = ({label, ...props}: any) => {
@@ -8,7 +8,6 @@ const FormikInput = ({label, ...props}: any) => {
             <label htmlFor={field.name}>{label}</label>
             <input {...field}/>
             <ErrorMessage name={field.name} component={FormikErrorMessage}/>
-
         </div>
     )
 }
