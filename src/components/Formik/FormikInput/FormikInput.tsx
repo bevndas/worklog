@@ -6,7 +6,7 @@ const FormikInput = ({label, ...props}: any) => {
     return (
         <div className={`form-control ${meta.error && meta.touched && 'error'}`}>
             <label htmlFor={field.name}>{label}</label>
-            <input {...field}/>
+            <input {...field} {...props}/>
             <ErrorMessage name={field.name} component={FormikErrorMessage}/>
         </div>
     )
