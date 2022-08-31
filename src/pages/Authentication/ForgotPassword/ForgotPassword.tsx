@@ -13,7 +13,7 @@ import {forgotPasswordValidationSchema, initialForgotPasswordData} from './Forgo
 
 const ForgotPassword: React.FC<{}> = () => {
     const navigate = useNavigate();
-    const [mailSent, setMailSent]  = useState<boolean>(true);
+    const [mailSent, setMailSent]  = useState<boolean>(false);
 
     const handleSubmit = () => {
             setMailSent(true);

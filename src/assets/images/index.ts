@@ -6,6 +6,7 @@ import TeamImage from './team.svg';
 import CongratulationsImage from './congratulations.svg';
 import ResetPasswordImage from './reset-password.svg';
 import MailSentImage from './mail-sent.svg';
+import LoaderImage from './loader.svg';
 
 export {
     LoginImage,
@@ -15,5 +16,6 @@ export {
     CongratulationsImage,
     ForgotPasswordImage,
     ResetPasswordImage,
-    MailSentImage
+    MailSentImage,
+    LoaderImage
 }

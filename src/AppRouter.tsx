@@ -12,10 +12,11 @@ import ForgotPassword from './pages/Authentication/ForgotPassword/ForgotPassword
 import ResetPassword from './pages/Authentication/ResetPassword/ResetPassword';
 import ProtectedRoutes from './components/Routes/ProtectedRoutes';
 import AuthProtectedRoutes from './components/Routes/AuthProtectedRoutes';
+import Loader from './components/Loader';
 
 const AppRouter = () => {
     return  (
-        <Suspense fallback={<div>Loading....</div>}>
+        <Suspense fallback={<Loader/>}>
             <Routes>
                 <Route element={<ProtectedRoutes />}>
                     <Route path={'/'} element={<Main />}>

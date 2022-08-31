@@ -1,20 +1,22 @@
 import React, {useState} from 'react';
 import {Form, Formik} from 'formik';
+import {useNavigate} from 'react-router-dom';
 
 import {SuccessImage, ResetPasswordImage} from 'assets/images';
 import FormikInput from 'components/Formik/FormikInput';
 import Button from 'components/Button';
+import {routepaths} from 'global/routepaths';
 
 import './ResetPassword.scss';
 import {initialResetPasswordData, resetPasswordValidationSchema} from './ResetPasswordValidation';
-import {routepaths} from '../../../global/routepaths';
-import {useNavigate} from 'react-router-dom';
 
 const ResetPassword: React.FC<{}> = () => {
-    const [passwordReset, setPasswordReset] = useState<boolean>(true);
+    const [passwordReset, setPasswordReset] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const handleSubmit = () => {}
+    const handleSubmit = () => {
+        setPasswordReset(true);
+    }
     return (
         <div className='reset-password-page full-page'>
             {
