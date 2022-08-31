@@ -7,6 +7,9 @@
   .login-brand-illustration {
     @include center-content;
     flex: 1;
+    img {
+      width: 350px;
+    }
   }
   .login-form-ctn {
     @include center-content;
@@ -22,6 +25,9 @@
         width: 300px;
         max-width: 500px;
         min-width: 300px;
+        .btn-ctn {
+          padding: 0 5px;
+        }
         p {
           @include font(0.8rem, var(--font-weight-light), var(--brand-color));
           cursor: pointer;

@@ -36,7 +36,9 @@ const Login: React.FC<{}> = () => {
                                     <FormikInput label='Username' name='username' autofill='none' type='email' />
                                     <FormikInput label='Password' name='password' type='password' />
                                     <p className='forgot-password' onClick={() => navigate(routepaths.auth.forgotPassword)}>Forgot password?</p>
-                                    <Button>Login</Button>
+                                    <div className="btn-ctn">
+                                        <Button>Login</Button>
+                                    </div>
                                     <p className='sign-up'>Don't have an account? <span onClick={() => navigate(routepaths.auth.signUp)}>Sign Up!</span></p>
                                 </Form>
                             )
