@@ -2,12 +2,13 @@
   padding: 10px;
   border-radius: 8px;
   border: none;
-  color: var(--text-primary);
+  color: var(--button-color-primary);
   font-family: 'Muli', 'sans-serif';
   font-size: 1rem;
   letter-spacing: 1px;
   min-height: 45px;
   max-height: 45px;
+  cursor: pointer;
 }
 
 // expand

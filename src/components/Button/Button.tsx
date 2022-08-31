@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import './Button.scss';
 import Spinner from "../Spinner";
 
@@ -7,11 +7,12 @@ interface IButtons {
     fill?: 'outline' | 'fill';
     color?: 'brand' | 'success' | 'danger';
     isLoading?: boolean;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
     children: any
 }
 
-const Button = ({expand = 'block', fill = 'fill', color = 'brand', isLoading = false, children}: IButtons) => {
-    return <button className={`button ${expand} ${fill} ${color}`}>
+const Button = ({expand = 'block', fill = 'fill', color = 'brand', isLoading = false, onClick, children}: IButtons) => {
+    return <button className={`button ${expand} ${fill} ${color}`} onClick={onClick}>
                 {isLoading ? <Spinner /> : children}
          </button>
 }
