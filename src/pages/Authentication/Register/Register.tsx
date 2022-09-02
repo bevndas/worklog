@@ -3,16 +3,18 @@ import {useNavigate} from 'react-router-dom';
 import {Form, Formik} from 'formik';
 
 import {TeamImage} from 'assets/images';
-import FormikInput from 'components/Formik/FormikInput';
+import {FormikInput, FormikSelect} from 'components/Formik';
 import Button from 'components/Button';
 import {routepaths} from 'global/routepaths';
 
 import {initialRegisterData, registerValidationSchema} from './RegisterValidation';
 import './Register.scss';
+import {ISelectProps} from 'global/type';
 
 
 const Register: React.FC<{}> = () => {
     const navigate = useNavigate();
+    const  userType: ISelectProps[] = [{label: 'Admin', value: 'admin'}, {label: 'Employee', value: 'employee'}];
 
     const handleSubmit = () => {
 
@@ -38,6 +40,7 @@ const Register: React.FC<{}> = () => {
                                         <FormikInput label='Last Name' name='lastName' type='text' />
                                     </div>
                                     <FormikInput label='Email' name='email' type='email' />
+                                    <FormikSelect label='Type' name='type' options={userType} />
                                     <div className="col-2">
                                         <FormikInput label='New Password' name='password' type='password' />
                                         <FormikInput label='Confirm Password' name='confirmPassword' type='password' />

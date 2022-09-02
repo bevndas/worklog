@@ -1,12 +1,16 @@
-input {
+input, select {
   padding: 10px 5px;
   border-radius: 5px;
   border: 1px solid  var(--input-border);
   font-family: 'Muli', 'sans-serif';
+  background: var(--color-white);
   &:focus {
     outline: none;
     border-color:  var(--brand-color);
   }
+}
+select option {
+  padding: 10px;
 }
 .form-control {
   display: flex;
