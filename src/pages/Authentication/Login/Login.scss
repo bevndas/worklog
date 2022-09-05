@@ -1,0 +1,58 @@
+@import "src/themes/theme";
+
+.login-page {
+  display: flex;
+  align-items: center;
+  background: var(--background-high);
+  .login-brand-illustration {
+    @include center-content;
+    flex: 1;
+    img {
+      width: 350px;
+    }
+  }
+  .login-form-ctn {
+    @include center-content;
+    flex: 1;
+    flex-direction: column;
+    .brand-information {
+      @include font(2.5rem, bolder, var(--brand-color));
+      margin-bottom: 20px;
+    }
+    .login-form {
+
+      form {
+        width: 300px;
+        max-width: 500px;
+        min-width: 300px;
+        .btn-ctn {
+          padding: 0 5px;
+        }
+        p {
+          @include font(0.8rem, var(--font-weight-light), var(--brand-color));
+          cursor: pointer;
+        }
+        p.forgot-password {
+          text-align: right;
+          margin: 15px 0 15px 0;
+        }
+        p.sign-up {
+          text-align: center;
+          margin-top: 40px;
+          color: var(--text-primary);
+          span {
+            color: var(--brand-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-size(phone-only) {
+.login-page {
+  .login-brand-illustration {
+    display: none;
+  }
+}
+}

@@ -1,0 +1,9 @@
+.page {
+  padding: 20px 0 0 10px;
+  color: var(--text-primary);
+  transition: all 250ms ease-in;
+}
+.full-page {
+  height: 100vh;
+  width: 100vw;
+}

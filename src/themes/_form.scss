@@ -1,0 +1,39 @@
+input, select {
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid  var(--input-border);
+  font-family: 'Muli', 'sans-serif';
+  background: var(--color-white);
+  &:focus {
+    outline: none;
+    border-color:  var(--brand-color);
+  }
+}
+select option {
+  padding: 10px;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px;
+  label{
+    margin-bottom: 5px;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semi-bold);
+  }
+  .form-error-message {
+    color: var(--error);
+  }
+  .form-error-message ~ input {
+    border-color: 1px solid  var(--error);
+  }
+}
+.form-control.error {
+  label {
+    color: var(--error);
+    input {
+      border-color: var(--error);
+    }
+  }
+}
+

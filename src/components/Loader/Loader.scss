@@ -1,0 +1,11 @@
+@import 'src/themes/theme';
+
+.loader-ctn {
+  @include center-content;
+  background: var(--background-high);
+  .loader-image {
+    img {
+      width: 200px;
+    }
+  }
+}

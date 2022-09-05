@@ -1,0 +1,75 @@
+@import "src/themes/theme";
+
+.register-page {
+  display: flex;
+  align-items: center;
+  background: var(--background-high);
+  .register-brand-illustration {
+    @include center-content;
+    flex: 1;
+    img {
+      width: 350px;
+    }
+  }
+  .register-form-ctn {
+    @include center-content;
+    flex: 1;
+    flex-direction: column;
+    .brand-information {
+      @include font(2.5rem, bolder, var(--brand-color));
+      margin-bottom: 20px;
+    }
+    .register-form {
+      padding: 0  10px;
+      form {
+        width: 300px;
+        max-width: 500px;
+        min-width: 300px;
+        .btn-ctn {
+          margin-top: 40px;
+          padding: 0 5px;
+        }
+        .col-2 {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          & > * {
+            flex: 1;
+          }
+        }
+        p {
+          @include font(0.8rem, var(--font-weight-light), var(--brand-color));
+          cursor: pointer;
+        }
+        p.sign-in {
+          text-align: center;
+          margin-top: 40px;
+          color: var(--text-primary);
+          span {
+            color: var(--brand-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-size(tablet-landscape-up) {
+  .register-page {
+    .register-form-ctn {
+      .register-form  {
+        form{
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@include for-size(phone-only) {
+  .register-page {
+    .register-brand-illustration {
+      display: none;
+    }
+  }
+}
