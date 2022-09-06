@@ -1,0 +1,41 @@
+@import 'src/themes/theme';
+
+.leave-title {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  svg {
+    font-size: 30px;
+    fill: var(--brand-color);
+  }
+  h3.title {
+    @include font(24px, var(--font-weight-mild), var(--neutral-text-color-primary));
+  }
+}
+.leave-description {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px;
+  align-items: center;
+  .leave-days{
+    @include font(40px, var(--font-weight-semi-bold), var(--neutral-text-color-primary));
+  }
+  .leave-types {
+    p.leave-status {
+      @include font(14px, var(--font-weight-normal), var(--neutral-text-color-primary));
+    }
+    p.scheduled-leave {
+      @include font(14px, var(--font-weight-light), var(--neutral-text-color-secondary));
+    }
+
+  }
+  .leave-statistics {
+    display: flex;
+    padding: 5px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    background:var(--light-brand-background);
+    border-radius: 5px;
+    @include font(14px, var(--font-weight-normal), var(--brand-color));
+  }
+}
