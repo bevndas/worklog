@@ -1,0 +1,31 @@
+.drop-down {
+  position: relative;
+  z-index: 1;
+  .menu-content {
+
+  }
+  .drop-down-content.right {
+    right: 0;
+  }
+  .drop-down-content.left {
+    left: 0;
+  }
+  .drop-down-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .drop-down-content {
+    position: absolute;
+    padding: 0.75rem;
+    border-radius: 8px;
+    top: calc(100% + 0.25rem);
+    background: var(--background-high);
+    box-shadow: var(--box-shadow);
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-2px);
+    transition: opacity, transform 150ms ease-in-out;
+  }
+}

@@ -1,0 +1,24 @@
+@import 'src/themes/theme';
+
+.profile-ctn {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40px 1fr 25px;
+  column-gap: 10px;
+  svg {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .image {
+    @include center-content;
+    height: 40px;
+    width: 40px;
+    border: 1px solid  var(--contrast-color);
+    border-radius: 50%;
+    svg {
+      font-size: 25px;
+      margin: unset;
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+.input-group {
+  position: relative;
+  z-index: 1;
+  svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+    color: var(--neutral-text-color-primary);
+  }
+  input {
+    position: relative;
+    padding-left: 35px;
+  }
+
+}
