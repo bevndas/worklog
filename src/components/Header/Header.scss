@@ -7,8 +7,15 @@
   background: var(--background-medium);
   border-bottom: 1px solid var(--background-light);
   color: var(--text-primary);
+
   .search-bar, .profile, .notifications {
       margin: 0 15px;
       cursor: pointer;
+  }
+  .search-bar {
+    margin: 0 60px 0 0;
+    input {
+      width: 250px;
+    }
   }
 }
