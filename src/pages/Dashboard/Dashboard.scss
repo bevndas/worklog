@@ -8,10 +8,4 @@
     grid-row-gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
   }
-  hr {
-    width: 95%;
-    background: var(--color-black);
-    opacity: 0.2;
-    margin: 40px auto;
-  }
 }
