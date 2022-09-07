@@ -13,6 +13,7 @@ import ResetPassword from './pages/Authentication/ResetPassword/ResetPassword';
 import ProtectedRoutes from './components/Routes/ProtectedRoutes';
 import AuthProtectedRoutes from './components/Routes/AuthProtectedRoutes';
 import Loader from './components/Loader';
+import Profile from './pages/Profile/Profile';
 
 const AppRouter = () => {
     return  (
@@ -23,6 +24,7 @@ const AppRouter = () => {
                         <Route path={'dashboard'}  element={<Dashboard />}></Route>
                         <Route path={'leaves'} element={<Leaves />}></Route>
                         <Route path={'settings'} element={<Settings />}></Route>
+                        <Route path={'profile'} element={<Profile />}></Route>
                         <Route path={''}  element={<Navigate to={'/dashboard'} replace />}></Route>
                     </Route>
                 </Route>
