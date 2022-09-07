@@ -1,10 +1,10 @@
 import React from 'react';
 import './SideMenu.scss';
-import {sideMenuData} from './SideMenu.data';
+import {NavigationMenuData} from '../NavigationMenu.data';
 import {Menu} from './SideMenu.interface';
 import {NavLink, useNavigate} from 'react-router-dom';
-import Icon from "../Icon";
-import useAuth from '../../hooks/useAuth';
+import Icon from "../../Icon";
+import useAuth from '../../../hooks/useAuth';
 
 
 const SideMenu: React.FC<{}> = () => {
@@ -22,7 +22,7 @@ const SideMenu: React.FC<{}> = () => {
                 Worklog
             </div>
             <div className="menu-list">
-                {sideMenuData.map(({id, url, label, icon}: Menu)=> {
+                {NavigationMenuData.map(({id, url, label, icon}: Menu)=> {
                     return (
                         <NavLink key={id} to={url} className={({isActive}) => isActive ? 'active': ''}>
                             <Icon name={icon} /> {label}

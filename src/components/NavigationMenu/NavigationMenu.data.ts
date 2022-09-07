@@ -1,7 +1,6 @@
-import {Menu} from './SideMenu.interface';
-import {MdSpaceDashboard, MdSnooze, MdSettings} from 'react-icons/md';
+import {Menu} from './SideMenu/SideMenu.interface';
 
-export const sideMenuData: Menu[] = [
+export const NavigationMenuData: Menu[] = [
     {
         id: 1,
         icon: 'dashboard',

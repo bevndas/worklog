@@ -1,0 +1,36 @@
+@import 'src/themes/theme';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  color: var(--text-primary);
+  border-top: 1px solid var(--background-light);
+  box-shadow: 0  0 5px 5px var(--background-light);
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 20px;
+    svg,span {
+      transition: color 150ms ease-in-out;
+    }
+    svg {
+      color: var(--text-primary);
+    }
+    span {
+      @include font(11px, var(--font-weight-normal), var(--text-primary))
+    }
+    &:hover {
+      color: var(--brand-color);
+    }
+    &.active{
+      svg, span {
+        color: var(--brand-color);
+      }
+    }
+  }
+}
