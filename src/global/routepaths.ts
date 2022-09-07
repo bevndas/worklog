@@ -7,5 +7,6 @@ export const routepaths = {
     },
     dashboard: '/dashboard',
     settings: '/settings',
-    leaves: '/leaves'
+    leaves: '/leaves',
+    profile: '/profile'
 }

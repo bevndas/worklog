@@ -13,6 +13,8 @@ import ResetPassword from './pages/Authentication/ResetPassword/ResetPassword';
 import ProtectedRoutes from './components/Routes/ProtectedRoutes';
 import AuthProtectedRoutes from './components/Routes/AuthProtectedRoutes';
 import Loader from './components/Loader';
+import Profile from './pages/Profile/Profile';
+import {routepaths} from './global/routepaths';
 
 const AppRouter = () => {
     return  (
@@ -20,25 +22,25 @@ const AppRouter = () => {
             <Routes>
                 <Route element={<ProtectedRoutes />}>
                     <Route path={'/'} element={<Main />}>
-                        <Route path={'dashboard'}  element={<Dashboard />}></Route>
-                        <Route path={'leaves'} element={<Leaves />}></Route>
-                        <Route path={'settings'} element={<Settings />}></Route>
-                        <Route path={''}  element={<Navigate to={'/dashboard'} replace />}></Route>
+                        <Route path={routepaths.dashboard}  element={<Dashboard />}></Route>
+                        <Route path={routepaths.leaves} element={<Leaves />}></Route>
+                        <Route path={routepaths.settings} element={<Settings />}></Route>
+                        <Route path={routepaths.profile} element={<Profile />}></Route>
+                        <Route path={''}  element={<Navigate to={routepaths.dashboard} replace />}></Route>
                     </Route>
                 </Route>
                 <Route element={<AuthProtectedRoutes />}>
                     <Route path={'/auth'} element={<Authentication />}>
                         <Route index  element={<Login />}></Route>
-                        <Route path={'login'}  element={<Login />}></Route>
-                        <Route path={'register'} element={<Register />}></Route>
-                        <Route path={'forgot-password'} element={<ForgotPassword />}></Route>
-                        <Route path={'reset-password'} element={<ResetPassword />}></Route>
+                        <Route path={routepaths.auth.login}  element={<Login />}></Route>
+                        <Route path={routepaths.auth.signUp} element={<Register />}></Route>
+                        <Route path={routepaths.auth.forgotPassword} element={<ForgotPassword />}></Route>
+                        <Route path={routepaths.auth.resetPassword} element={<ResetPassword />}></Route>
                     </Route>
                 </Route>
                 <Route path={'*'} element={<Page404/>}></Route>
             </Routes>
         </Suspense>
-
     )
 }
 export default AppRouter;

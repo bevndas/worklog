@@ -4,15 +4,23 @@ import SearchBar from './SearchBar';
 import Profile from './Profile';
 import Notifications from './Notifications';
 
-const Header: React.FC<{}> = () => {
+interface IHeader {
+    smallScreen: boolean
+}
+
+const Header: React.FC<IHeader> = ({smallScreen}) => {
     return  (
         <div className='header'>
-            <div className="search-bar">
-                <SearchBar />
-            </div>
-            <div className="profile">
-                <Profile />
-            </div>
+            {
+                !smallScreen && <>
+                    <div className="search-bar">
+                        <SearchBar />
+                    </div>
+                    <div className="profile">
+                        <Profile />
+                    </div>
+                </>
+            }
             <div className="notifications">
                 <Notifications />
             </div>
