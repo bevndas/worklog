@@ -12,22 +12,22 @@
   border-top: 1px solid var(--background-light);
   box-shadow: 0  0 5px 5px var(--background-light);
   --tempWidth: calc(100% / 4);
-  hr.first {
+  a.active[data-0] ~ hr {
     left: 0;
   }
-  hr.second {
+  a.active[data-1] ~ hr {
     left: var(--tempWidth);
   }
-  hr.third {
+  a.active[data-2] ~ hr {
     left: calc(2 * var(--tempWidth));
   }
-  hr.fourth {
+  a.active[data-3] ~ hr {
     left: calc(3 * var(--tempWidth));
   }
   hr {
     position: absolute;
     z-index: 2;
-    width: calc(100% / 4);
+    width: var(--tempWidth);
     top: 0;
     opacity: 1;
     border:1px solid var(--brand-color);

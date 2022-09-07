@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Footer.scss';
 import {NavigationMenuData} from '../NavigationMenu.data';
 import {Menu} from '../SideMenu/SideMenu.interface';
@@ -7,8 +7,6 @@ import {NavLink} from 'react-router-dom';
 import {routepaths} from 'global/routepaths';
 
 const Footer: React.FC<{}> = () => {
-    const tabName=['first', 'second', 'third', 'fourth'];
-    const [activeTab, setActiveTab] = useState<number>(0);
     return (
         <div className='footer'>
             {
@@ -16,7 +14,7 @@ const Footer: React.FC<{}> = () => {
                     return (
                         <NavLink key={id} data-option={index + 1} to={url}
                                  className={({isActive}) => isActive ? 'active': ''}
-                                 onClick={() => setActiveTab(index)}
+                                 {...{['data-' + index]: true}}
                         >
                             <Icon name={icon} /> <span>{label}</span>
                         </NavLink>
@@ -24,12 +22,12 @@ const Footer: React.FC<{}> = () => {
                 })
             }
             <NavLink key={3} to={routepaths.profile}
+                     {...{['data-' + 3]: true}}
                      className={({isActive}) => isActive ? 'active': ''}
-                     onClick={() => setActiveTab(3)}
             >
                 <Icon name='person' /> <span>Profile</span>
             </NavLink>
-            <hr className={`${tabName[activeTab]}`}/>
+            <hr/>
         </div>
     )
 }

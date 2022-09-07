@@ -14,10 +14,35 @@
 .menu-list {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding-left: 10px;
+  z-index: 2;
+  --tempHeight: calc(100% / 3);
+  .active-background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background: var(--brand-color);
+    height: var(--tempHeight);
+    left: 0;
+    transition: top 200ms ease-in-out;
+  }
+
+  a.active[data-0] ~ .active-background {
+    top: 0;
+  }
+  a.active[data-1] ~ .active-background {
+    top: var(--tempHeight);
+  }
+  a.active[data-2] ~ .active-background {
+    top: calc(2 * var(--tempHeight));
+  }
+
   a {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
     padding: 10px;
     color: var(--text-primary);
     text-decoration: none;
@@ -30,7 +55,7 @@
       color: var(--brand-color);
     }
     &.active{
-      background: var(--brand-color);
+     // background: var(--brand-color);
       color: var(--background-light);
     }
   }

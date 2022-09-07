@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SideMenu.scss';
 import {NavigationMenuData} from '../NavigationMenu.data';
 import {Menu} from './SideMenu.interface';
@@ -15,13 +15,17 @@ const SideMenu: React.FC<{}> = () => {
                 Worklog
             </div>
             <div className="menu-list">
-                {NavigationMenuData.map(({id, url, label, icon}: Menu)=> {
+                {NavigationMenuData.map(({id, url, label, icon}: Menu, index)=> {
                     return (
-                        <NavLink key={id} to={url} className={({isActive}) => isActive ? 'active': ''}>
+                        <NavLink key={id} to={url}
+                                 {...{['data-' + index]: true}}
+                                 className={({isActive}) => isActive ? 'active': ''}
+                        >
                             <Icon name={icon} /> {label}
                         </NavLink>
                     )
                 })}
+                <div className='active-background'></div>
             </div>
         </div>
     )
