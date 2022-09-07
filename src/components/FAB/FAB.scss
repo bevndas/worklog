@@ -1,0 +1,71 @@
+@import 'src/themes/theme';
+@mixin position($top, $left, $translateX, $translateY ) {
+  top: $top;
+  left: $left;
+  transform: translate($translateX, $translateY);
+}
+
+.fab {
+  position: absolute;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--brand-color);
+  @include center-content;
+  svg {
+    color: var(--text-primary);
+    font-size: 35px;
+  }
+}
+.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-center {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.bottom-center {
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.mid-right {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.mid-left {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.mid-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
