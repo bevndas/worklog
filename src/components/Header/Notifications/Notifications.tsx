@@ -8,7 +8,9 @@ const Notifications = () => {
         <>
         <DropDown menuContent={<Icon name='notifications'/>}
                   dropDownContent={
-                      <p>Menu content</p>
+                      <>
+                          <p>No Notifications</p>
+                      </>
                   }
         />
             </>

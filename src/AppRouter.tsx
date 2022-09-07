@@ -15,6 +15,9 @@ import AuthProtectedRoutes from './components/Routes/AuthProtectedRoutes';
 import Loader from './components/Loader';
 import Profile from './pages/Profile/Profile';
 import {routepaths} from './global/routepaths';
+import LeaveList from './pages/Leaves/LeavesList/LeaveList';
+import LeaveRequest from './pages/Leaves/LeaveRequest/LeaveRequest';
+import LeaveRequestEdit from './pages/Leaves/LeaveRequestEdit/LeaveRequestEdit';
 
 const AppRouter = () => {
     return  (
@@ -23,7 +26,12 @@ const AppRouter = () => {
                 <Route element={<ProtectedRoutes />}>
                     <Route path={'/'} element={<Main />}>
                         <Route path={routepaths.dashboard}  element={<Dashboard />}></Route>
-                        <Route path={routepaths.leaves} element={<Leaves />}></Route>
+                        <Route path={routepaths.leaves.base} element={<Leaves />}>
+                            <Route path={routepaths.leaves.list} element={<LeaveList />}></Route>
+                            <Route path={routepaths.leaves.create} element={<LeaveRequest />}></Route>
+                            <Route path={routepaths.leaves.edit} element={<LeaveRequestEdit />}></Route>
+                            <Route path={''}  element={<Navigate to={routepaths.leaves.list} replace />}></Route>
+                        </Route>
                         <Route path={routepaths.settings} element={<Settings />}></Route>
                         <Route path={routepaths.profile} element={<Profile />}></Route>
                         <Route path={''}  element={<Navigate to={routepaths.dashboard} replace />}></Route>

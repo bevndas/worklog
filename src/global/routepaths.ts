@@ -7,6 +7,11 @@ export const routepaths = {
     },
     dashboard: '/dashboard',
     settings: '/settings',
-    leaves: '/leaves',
+    leaves: {
+        base: '/leaves',
+        list:  '/leaves/list',
+        create: '/leaves/create',
+        edit: '/leaves/edit/:id'
+    },
     profile: '/profile'
 }

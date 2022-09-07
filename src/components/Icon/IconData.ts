@@ -6,7 +6,7 @@ import {
     MdAirplaneTicket,
     MdSick,
     MdAttachMoney,
-    MdNotifications, MdOutlineSearch, MdKeyboardArrowDown, MdPerson
+    MdNotifications, MdOutlineSearch, MdKeyboardArrowDown, MdPerson, MdAdd
 } from 'react-icons/md';
 
 export const IconData = {
@@ -20,5 +20,6 @@ export const IconData = {
     notifications: MdNotifications,
     search: MdOutlineSearch,
     chevronDown:MdKeyboardArrowDown,
-    person: MdPerson
+    person: MdPerson,
+    plus: MdAdd,
 }

@@ -27,5 +27,11 @@
     pointer-events: none;
     transform: translateY(5px);
     transition: opacity, transform 150ms ease-in-out;
+    p {
+      border-bottom: 1px solid var(--light-border);
+    }
+    p:last-child {
+      border-bottom: unset;
+    }
   }
 }
