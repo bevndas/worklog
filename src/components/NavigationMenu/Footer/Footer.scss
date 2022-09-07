@@ -1,14 +1,41 @@
 @import 'src/themes/theme';
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: center;
   height: 60px;
   width: 100%;
   color: var(--text-primary);
   border-top: 1px solid var(--background-light);
   box-shadow: 0  0 5px 5px var(--background-light);
+  --tempWidth: calc(100% / 4);
+  hr.first {
+    left: 0;
+  }
+  hr.second {
+    left: var(--tempWidth);
+  }
+  hr.third {
+    left: calc(2 * var(--tempWidth));
+  }
+  hr.fourth {
+    left: calc(3 * var(--tempWidth));
+  }
+  hr {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% / 4);
+    top: 0;
+    opacity: 1;
+    border:1px solid var(--brand-color);
+    background: var(--brand-color);
+    height: 1px;
+    margin: 0;
+    transition: left 200ms ease-in-out;
+  }
   a {
     display: flex;
     flex-direction: column;

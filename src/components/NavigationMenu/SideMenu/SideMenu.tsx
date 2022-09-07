@@ -8,13 +8,6 @@ import useAuth from '../../../hooks/useAuth';
 
 
 const SideMenu: React.FC<{}> = () => {
-    const navigate= useNavigate();
-    const {handleLogout} = useAuth();
-
-    const handleSignOut = () => {
-        handleLogout();
-        navigate('/auth/login');
-    }
 
     return (
         <div className='side-menu'>
@@ -29,8 +22,6 @@ const SideMenu: React.FC<{}> = () => {
                         </NavLink>
                     )
                 })}
-                <a onClick={handleSignOut}>
-                    <Icon name='logout' /> Sign Out</a>
             </div>
         </div>
     )
