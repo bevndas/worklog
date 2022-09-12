@@ -1,9 +1,10 @@
 import React from 'react';
 import './LeaveRequest.scss';
+import LeaveRequestForm from '../LeaveRequestForm';
 
 const LeaveRequest = () => {
     return (
-        <div>Create</div>
+        <LeaveRequestForm />
     )
 }
 export default LeaveRequest;

@@ -1,4 +1,4 @@
-input, select {
+input, select, textarea {
   padding: 10px 5px;
   border-radius: 5px;
   border: 1px solid  var(--input-border);
@@ -8,6 +8,9 @@ input, select {
     outline: none;
     border-color:  var(--brand-color);
   }
+}
+textarea {
+  resize: vertical;
 }
 select option {
   padding: 10px;
